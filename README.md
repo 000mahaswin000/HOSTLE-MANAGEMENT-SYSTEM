@@ -5,89 +5,83 @@ A comprehensive, console-based administrative application designed to streamline
 🚀 Key Features
 🛡️ Administrative Control (Secure Portal)
 
-Role-Based Access: Password-protected login system ensuring only authorized personnel can modify student or hostel data.
+       Role-Based Access: Password-protected login system ensuring only authorized personnel can modify student or hostel data.
 
-Comprehensive Student Management (CRUD):
+       Comprehensive Student Management (CRUD):
 
-
-Advanced Registration: Collects and validates 20+ fields including academic details and contact info.
-
-
-Nested Update System: Intuitive menu-driven updates using a nested switch-case for precise data modification.
+ 
+                  Advanced Registration: Collects and validates 20+ fields including academic details and contact info.
 
 
-Soft Deletion: Implements an "Active Status" flag to preserve historical data integrity instead of permanent removal.
-
-Data Analysis & Reporting:
+                  Nested Update System: Intuitive menu-driven updates using a nested switch-case for precise data modification.
 
 
-Search & Filter: Lookup students by ID, name, or filter specifically by campus.
-+1
+                  Soft Deletion: Implements an "Active Status" flag to preserve historical data integrity instead of permanent removal.
+
+        Data Analysis & Reporting:
 
 
-In-Memory Sorting: Organizes records by name or room number for logistical planning.
+                  Search & Filter: Lookup students by ID, name, or filter specifically by campus.
 
 
-Dashboard: Real-time summary view of the entire hostel state.
+                  In-Memory Sorting: Organizes records by name or room number for logistical planning.
 
 
-Export: Generates human-readable .txt reports for external use.
-+1
+                  Dashboard: Real-time summary view of the entire hostel state.
+
+
+                  Export: Generates human-readable .txt reports for external use.
+
 
 🎓 Student Portal (Self-Service)
 
-Issue Reporting: Students can directly raise tickets for maintenance or hostel facilities.
+                  Issue Reporting: Students can directly raise tickets for maintenance or hostel facilities.
 
 
-Live Tracking: Real-time status monitoring (OPEN / IN_PROGRESS / RESOLVED) for all submitted tickets.
+                  Live Tracking: Real-time status monitoring (OPEN / IN_PROGRESS / RESOLVED) for all submitted tickets.
 
 🏗️ Technical Architecture
-Data Management & Persistence
-The system prioritizes data durability. All information is preserved between sessions using direct binary file I/O.
-+1
+
+     Data Management & Persistence
+
+            The system prioritizes data durability. All information is preserved between sessions using direct binary file I/O.
+
+                                   students.dat: Permanent storage for student records.
+
+                                   tickets.dat: Persistent log of all maintenance issues.
+
+     Implementation Details
+
+                   Language: C.
 
 
-students.dat: Permanent storage for student records.
+                   Core Paradigms: Modular Design, Structured Programming.
 
+                   Security & Validation:
 
-tickets.dat: Persistent log of all maintenance issues.
+                                   Duplicate ID prevention.
 
-Implementation Details
+                                   Robust input handling with buffer clearing to prevent crashes from invalid user input.
 
-Language: C.
-
-
-Core Paradigms: Modular Design, Structured Programming.
-
-Security & Validation:
-
-Duplicate ID prevention.
-
-Robust input handling with buffer clearing to prevent crashes from invalid user input.
-
-Formatted table-style UI for clean data visualization.
+                                   Formatted table-style UI for clean data visualization.
 
 📂 Project Structure
 
-File Handling Module: Manages binary serialization and data loading.
+             File Handling Module: Manages binary serialization and data loading.
 
 
-Admin Module: Contains core business logic for record management.
+             Admin Module: Contains core business logic for record management.
 
 
-Ticket Management: Handles the lifecycle of student-reported issues.
+             Ticket Management: Handles the lifecycle of student-reported issues.
 
 
-Utility Module: Custom functions for robust integer and string input.
+             Utility Module: Custom functions for robust integer and string input.
 
 🛠️ Requirements & Setup
 
-Platform: Windows (Console-Based).
+              Platform: Windows (Console-Based).
 
-
-Compiler: GCC (MinGW / MSYS2 recommended).
+              Compiler: GCC (MinGW / MSYS2 recommended).
 
 Developer: 000mahaswin000
-
-
-Portfolio
