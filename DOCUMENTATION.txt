@@ -1,0 +1,139 @@
+MANAGEMENT SYSTEM - DOCUMENTED VERSION
+================================================
+
+PROJECT OVERVIEW:
+-----------------
+This C program implements a complete Hostel Management System for hostels.
+It allows administrators to manage student records and hostel issues, while students
+can raise and track their complaints.
+
+CORE FEATURES:
+--------------
+1. Add Student Details
+2. Update Student Details using Nested Switch Case
+3. Prevent Duplicate Student IDs
+4. Store Data in Binary Files (Persistent Storage)
+5. Student Issue Ticket System
+6. Admin-only Login System with Password Protection
+7. View Students in Table Format
+8. Search, Sort, and Filter Student Records
+9. Dashboard Summary View
+10. Export Student Data to File
+
+FILES USED:
+-----------
+students.dat  -> Stores all student records permanently
+tickets.dat   -> Stores all issue tickets permanently
+students_report.txt -> Exported student report
+
+DATA STRUCTURES:
+----------------
+STRUCT Student:
+Stores:
+- ID
+- Name
+- Parent Name
+- Mother Name
+- Phone
+- Email
+- Room Number
+- Blood Group
+- Academic Year
+- Department
+- Campus (SSN / SNU)
+- District
+- State
+- Pincode
+- Address
+- Guardian Name
+- Guardian Phone
+- Date of Birth
+- Gender
+- Hostel Block
+- Admission Year
+- Fee Status
+- Active Status (Soft Delete)
+
+STRUCT Ticket:
+Stores:
+- Ticket ID
+- Student ID
+- Student Name
+- Issue Description
+- Issue Status (OPEN / IN_PROGRESS / RESOLVED)
+
+PROGRAM MODULES:
+----------------
+1. File Handling Module
+   - load_data()
+   - save_data()
+
+2. Admin Module
+   - admin_login()
+   - admin_menu()
+   - add_student()
+   - update_student()
+   - delete_student()
+   - view_all_students()
+   - view_active_students()
+   - search_student_by_id()
+   - search_student_by_name()
+   - sort_students_by_name()
+   - sort_students_by_room()
+   - view_students_by_campus()
+   - dashboard()
+   - export_students_report()
+
+3. Student Portal Module
+   - raise_issue_student_portal()
+   - check_issue_status_student_portal()
+
+4. Ticket Management Module (Admin Only)
+   - raise_issue_admin()
+   - view_all_tickets()
+   - view_open_tickets()
+   - update_ticket_status()
+
+5. Utility Input Functions
+   - read_string()
+   - read_int()
+   - clear_input_buffer()
+
+SECURITY FEATURES:
+------------------
+- Admin login protected with password
+- Students cannot change data
+- Students can only raise and check their own tickets
+
+DATA PERSISTENCE:
+-----------------
+All data is stored into binary files so that the program retains information even after
+closing the application.
+
+INPUT VALIDATION:
+-----------------
+- Prevents duplicate student ID
+- Ensures integer input for menu and ID values
+- Cleans input buffer after every scanf
+
+TABLE DISPLAY:
+--------------
+Students and tickets are displayed in clean formatted table style using printf formatting.
+
+PROJECT USE CASE:
+-----------------
+Admin can manage student database and hostel complaints effectively.
+Students can raise issues regarding hostel facilities and track their complaint status.
+
+PLATFORM:
+---------
+Windows Application (Console-Based)
+
+COMPILER:
+---------
+GCC (MinGW / MSYS2)
+
+MADE BY:
+-------
+000mahaswin000
+https://000mahaswin000.github.io/Portfolio/
